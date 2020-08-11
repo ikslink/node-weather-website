@@ -10,7 +10,8 @@ const forecast = (latitude, longitude, callback) => {
             callback('Coordinates error. Try another search.', undefined);
         } else {
             const weather = body.current;
-            callback(undefined, weather.weather_descriptions[0] + ". It is currentrly " + weather.temperature + " degrees out. It feels like " + weather.feelslike + " degrees out.");
+            console.log(weather);
+            callback(undefined, "<span class='weather-img'><img src='" + weather.weather_icons + "'></span><span class='weather-details'>" + weather.weather_descriptions[0] + ". <br>It is currentrly " + weather.temperature + " degrees out. <br>It feels like " + weather.feelslike + " degrees out. <br> Humidity is " + weather.humidity + "%.</span>");
         }
     });
 }

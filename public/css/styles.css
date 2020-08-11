@@ -53,3 +53,9 @@ button {
     color: white;
     padding: 8px;
 }
+
+.weather-details {
+    display: inline-block; 
+    margin-left: 30px; 
+    width:300px;
+}
